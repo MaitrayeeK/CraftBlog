@@ -1,0 +1,202 @@
+.container {
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    margin: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem 0.5rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "grid-1 grid-1 grid2"
+        "grid3 grid4 grid2"
+        "grid6 grid5 grid5";
+
+    .grid-1 {
+        grid-area: grid-1;
+    }
+
+    .grid2 {
+        grid-area: grid2;
+    }
+
+    .grid3 {
+        grid-area: grid3;
+    }
+
+    .grid4 {
+        grid-area: grid4;
+    }
+
+    .grid5 {
+        grid-area: grid5;
+    }
+
+    .grid6 {
+        grid-area: grid6;
+    }
+}
+
+@media all and (-ms-high-contrast:none) {
+    .container {
+        display: -ms-grid;
+        -ms-grid-columns: repeat(3, 1fr);
+        -ms-grid-rows: repeat(3, 1fr);
+
+        .grid-1 {
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 2;
+        }
+
+        .grid2 {
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 2;
+            -ms-grid-column: 3;
+            -ms-grid-column-span: 1;
+        }
+
+        .grid3 {
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 1;
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 1;
+        }
+
+        .grid4 {
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 1;
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 1;
+        }
+
+        .grid5 {
+            -ms-grid-row: 3;
+            -ms-grid-row-span: 1;
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 2;
+        }
+
+        .grid6 {
+            -ms-grid-row: 3;
+            -ms-grid-row-span: 1;
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 1;
+        }
+    }
+}
+
+.cb_oneblog {
+    padding: 5rem 10rem;
+
+    .cb_oneblog_heading {
+        margin: 2rem;
+    }
+
+    .cb_oneblog_content {
+        margin: 2rem;
+    }
+
+    .cb_oneblog_reaction {
+        display: flex;
+        margin: 2rem;
+
+        div {
+            margin-right: 1rem;
+        }
+    }
+
+    .cb_oneblog_comment-section {
+        margin: 2rem;
+
+        .cb_oneblog_comment-user {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    .cb_oneblog_comment-user_img {
+        margin-right: 1rem;
+
+        img {
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+}
+
+.cb_generateblog {
+    padding: 5rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        input {
+            margin: 1rem;
+        }
+    }
+
+    .cb_generateblog_content {
+        .cb_generateblog_content-parameters_title {
+            margin: 1rem;
+        }
+
+        .cb_generateblog_content-parameters_form {
+            .title-subtitle {
+                [data-tip]:before {
+                    top: 50px
+                }
+
+                [data-tip]:after {
+                    top: 55px;
+                }
+            }
+
+            .cb_generateblog_content-parameters_form_content {
+
+                .insipiration {
+                    display: flex;
+
+                    div {
+                        margin: 0;
+                    }
+
+                    [data-tip]:before {
+                        top: 50px
+                    }
+
+                    [data-tip]:after {
+                        top: 55px
+                    }
+                }
+
+                .tags {
+
+                    [data-tip]:after {
+                        bottom: 0;
+                        transform: translate(150%, 110%);
+                        margin: 1rem;
+                    }
+
+                    [data-tip]:hover:before {
+                        display: none;
+                    }
+                }
+            }
+
+            button {
+                min-width: 6rem;
+                margin: 2rem;
+            }
+        }
+    }
+}
